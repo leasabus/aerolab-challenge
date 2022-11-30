@@ -17,9 +17,21 @@ Importants points of the proyect:
 
 -Product
 -Use the interfaces for define the type of dates for the products.
--Create the context , its similir to the context of users
+-Create the context , its similar to the context of users
 -Use the promise to fetch the object of products
 -Create the component ProductList in this component renders the other two components
 Filters and Count
 -Using the enums, this tool it allows to declare the possibles filters
+
+
+Filters
+-Funcionalidad de dejar en is active cuando clickeamos(filters)
+-Funcionalidad de los filtros con usememo y swich , case
+
+
+Funcionalidades a aplicar:
+Fetching de datos
+Modificaciones de UI
+Cart component al abrir
+
 

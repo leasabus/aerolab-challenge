@@ -1,5 +1,7 @@
 import { Center, CircularProgress } from '@chakra-ui/react';
 import React from 'react';
+import productApi from '../product/productApi';
+import { Product } from '../product/types';
 import api from './api';
 import { User } from './userTypes';
 
@@ -15,6 +17,7 @@ export interface Context {
     };
     actions: {
         addPoints: (amount: number) => Promise<void>
+        redeem: (product: Product) => Promise<void>
     };
 }
 
@@ -28,6 +31,16 @@ const UserProvider = ({ children }: any) => {
     const [status, setStatus] = React.useState<"pending" | "resolve" | "rejected">("pending");
     //definimos los 3 tipos de datos que podemos utilizar mientras se obtiene la data
 
+
+    //funcion con la q vamos a comprar los productos
+    async function handleRedeem(product: Product) {
+        if (!user) return;
+        //traemos la accion q declaramos en el product api
+        return productApi.redeem(product).then(() => {
+            setUser({ ...user, points: user.points - product.cost })
+            //hacemos un spread para recup al user, definimos los puntos q tiene y se lo restamos al costo del product
+        })
+    }
 
     //esta funcion recibe los datos de la api points y su funcion es agregarlos al user
     //el then establece q pasa cuando salga bien
@@ -67,7 +80,8 @@ const UserProvider = ({ children }: any) => {
         user,
     };
     const actions = {
-        addPoints: handleAddPoints
+        addPoints: handleAddPoints,
+        redeem: handleRedeem,
     };
 
 

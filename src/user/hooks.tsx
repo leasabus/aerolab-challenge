@@ -15,3 +15,10 @@ export const useUser = (): Context["state"]["user"] => {
     const { state: { user }, } = useContext(UserContext);
     return user;
 }
+
+//hook para user useRedeem
+export const useRedeem = (): Context["actions"]["redeem"] => {
+    const { actions: { redeem } } = useContext(UserContext);
+    return redeem;
+
+}

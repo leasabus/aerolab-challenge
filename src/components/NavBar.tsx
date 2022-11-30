@@ -1,5 +1,5 @@
 import React from 'react'
-import { Stack, Image, Text, Box } from '@chakra-ui/react';
+import { Stack, Image, Text, Box, Button } from '@chakra-ui/react';
 import logo from "../assets/logo.svg";
 import coin from "../assets/coin.svg";
 import { usePoints } from '../user/hooks';
@@ -20,15 +20,23 @@ export const NavBar: React.FC = () => {
                 </Stack>
                 <Stack direction="row" alignItems="center" spacing={6}>
                     <Text fontWeight="600" fontSize="lg">{user.name}</Text>
+                    <Button
+                        backgroundColor="gray.300"
+                        fontSize="xl"
+                        paddingX={3}
+                        paddingY={1}
+                        borderRadius="xl"
+                        onClick={() => addPoints(1000)}>
+                        +</Button>
                     <Stack direction="row"
-                        backgroundColor="gray.200"
+                        backgroundColor="gray.300"
                         borderRadius="xl"
                         paddingX={3}
                         paddingY={1}
                         alignItems="center"
                         cursor="pointer"
                         onClick={() => addPoints(1000)}  >
-                        <Text>{points}</Text>
+                        <Text fontWeight="semi-bold" fontSize="xl">{points}</Text>
                         <Image src={coin} width={6} height={6}></Image>
                     </Stack>
                 </Stack>
