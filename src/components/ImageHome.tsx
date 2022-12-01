@@ -5,18 +5,20 @@ import header from "../assets/header-x1.png";
 export const ImageHome: React.FC = () => {
     return (
 
-        <Stack>
+        <Container maxWidth={"container.xl"} >
             <Flex backgroundImage={header}
                 width="full"
                 backgroundSize="cover"
                 backgroundRepeat="no-repeat"
                 justifyContent="flex-start"
+
                 alignItems="flex-end"
-                minHeight={64}>
-                <Heading color="gray.700" padding={4} fontSize="4xl">Electronics</Heading>
+                minHeight={54}
+                height={[28, '250px', '385px']}>
+                <Heading color="gray.700" padding={6} fontSize="4xl" display={['none', 'flex']}>Electronics</Heading>
             </Flex>
 
-        </Stack>
+        </Container>
 
     )
 }

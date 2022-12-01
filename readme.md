@@ -30,7 +30,7 @@ Filters
 
 
 Funcionalidades a aplicar:
-Fetching de datos
+
 Modificaciones de UI
 Cart component al abrir
 

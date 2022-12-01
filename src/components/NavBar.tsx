@@ -4,6 +4,8 @@ import logo from "../assets/logo.svg";
 import coin from "../assets/coin.svg";
 import { usePoints } from '../user/hooks';
 import { useUser } from '../user/hooks';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -11,6 +13,7 @@ export const NavBar: React.FC = () => {
 
     const [points, addPoints] = usePoints();
     const user = useUser();
+
     //utilizamos el hook q creamos
     return (
         <Box padding={6} backgroundColor='white' >
@@ -26,7 +29,9 @@ export const NavBar: React.FC = () => {
                         paddingX={3}
                         paddingY={1}
                         borderRadius="xl"
-                        onClick={() => addPoints(1000)}>
+                        onClick={() => addPoints(1000)}
+
+                    >
                         +</Button>
                     <Stack direction="row"
                         backgroundColor="gray.300"

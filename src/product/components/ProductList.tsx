@@ -44,14 +44,14 @@ export const ProductList: React.FC<Props> = ({ products }) => {
             <Stack
                 alignItems="center"
                 justifyContent="center"
-                direction="row"
-                spacing={6}
-                padding={4}
+                direction={["column", "row"]}
+                spacing={[0, 6]}
+                padding={[0, 4]}
                 width="100%"
                 divider={<Divider borderColor="gray.400" height={12} orientation="vertical" />}>
 
                 {/* este comp va a devolver la cantaidad de productos */}
-                <Count current={products.length} total={products.length} />
+                <Count />
                 {/* este componente va a mostrar los filtros y que va a pasar caundo
                 los filtros cambien */}
 
