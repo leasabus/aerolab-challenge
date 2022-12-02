@@ -1,5 +1,5 @@
 
-This challenge was builded for practice Typescript and ChakraUi
+This challenge was builded for practice Typescript and ChakraUi.
 Toolkit:
 -Typescript
 -React
