@@ -1,4 +1,4 @@
-import { Box, Button, Stack, Text } from '@chakra-ui/react';
+import { Box, Stack, Text } from '@chakra-ui/react';
 import React from 'react'
 import { Filter } from './enum'
 

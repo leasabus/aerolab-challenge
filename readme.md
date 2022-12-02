@@ -5,6 +5,12 @@ Importants points of the proyect:
 -Props
 -Childrens
 
+Funtionalities most important:
+-addpoints(context user)
+-filters(enum, product components, using sort)
+-redeem products
+-pagination(grid)
+
 
 
 
@@ -29,9 +35,8 @@ Filters
 -Funcionalidad de los filtros con usememo y swich , case
 
 
-Funcionalidades a aplicar:
 
-Modificaciones de UI
-Cart component al abrir
+
+
 
 

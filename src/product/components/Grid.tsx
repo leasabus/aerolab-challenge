@@ -3,7 +3,7 @@ import { Product } from '../types';
 import { Button, Grid as ChakraGrid, Stack } from '@chakra-ui/react';
 import { ProductCard } from './ProductCard';
 import { useState } from 'react';
-import { Pagination } from './Pagination';
+
 
 interface Props {
     products: Product[];
@@ -46,8 +46,8 @@ export const Grid: React.FC<Props> = ({ products }) => {
                 }
             </ChakraGrid>
             <Stack direction="row" spacing={4} justifyContent="center" alignItems="center" paddingY={8}  >
-                <Button borderRadius="xl" padding={4} fontSize="xl" backgroundColor="#3bf4fb" width="120px" onClick={handleReturnPage}>Back</Button>
-                <Button borderRadius="xl" padding={4} fontSize="xl" backgroundColor="#3bf4fb" width="120px" onClick={handleChangePage}>Next Page</Button>
+                <Button borderRadius="xl" padding={4} fontSize="lg" backgroundColor="#3bf4fb" width="120px" onClick={handleReturnPage}>Back</Button>
+                <Button borderRadius="xl" padding={4} fontSize="lg" backgroundColor="#3bf4fb" width="120px" onClick={handleChangePage}>Next Page</Button>
             </Stack>
         </>
 
